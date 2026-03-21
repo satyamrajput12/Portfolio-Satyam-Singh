@@ -98,9 +98,25 @@ export const resumeData = {
     },
   ],
   skills: {
-    languages: ["C++", "Python", "C", "Java", "React", "Node"],
-    toolsPlatforms: ["MongoDB", "VS Code", "MS SQL Server"],
-    softSkills: ["Time Management", "Problem-Solving", "Team Player", "Adaptability"],
+    languages: [
+      { name: "C++", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
+      { name: "Python", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+      { name: "C", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" },
+      { name: "Java", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
+      { name: "React", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { name: "Node", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" }
+    ],
+    toolsPlatforms: [
+      { name: "MongoDB", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+      { name: "VS Code", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
+      { name: "MS SQL Server", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" }
+    ],
+    softSkills: [
+      { name: "Time Management", image: "https://cdn-icons-png.flaticon.com/512/2928/2928841.png" },
+      { name: "Problem-Solving", image: "https://cdn-icons-png.flaticon.com/512/1006/1006509.png" },
+      { name: "Team Player", image: "https://cdn-icons-png.flaticon.com/512/1256/1256082.png" },
+      { name: "Adaptability", image: "https://cdn-icons-png.flaticon.com/512/4341/4341352.png" }
+    ],
   },
   education: [
     {

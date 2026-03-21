@@ -40,10 +40,11 @@ export default function Skills() {
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {g.items.map((item) => (
-                    <motion.span key={item} whileHover={{ scale: 1.05 }}
-                      className="font-mono text-xs px-3 py-1.5 rounded-lg cursor-default"
+                    <motion.span key={item.name} whileHover={{ scale: 1.05 }}
+                      className="font-mono text-xs px-3 py-1.5 rounded-lg flex items-center gap-2 cursor-default"
                       style={{ background: `${g.color}12`, color: g.color, border: `1px solid ${g.color}25` }}>
-                      {item}
+                      <img src={item.image} alt={item.name} className="w-4 h-4 object-contain rounded-sm" />
+                      {item.name}
                     </motion.span>
                   ))}
                 </div>
