@@ -82,7 +82,7 @@ export default function Hero() {
               <div className="w-64 h-64 sm:w-72 sm:h-72 rounded-3xl overflow-hidden gradient-border"
                 style={{ boxShadow: "0 0 60px rgba(0,212,255,0.15)" }}>
                 <Image src={basics.photo} alt={basics.name} width={288} height={288}
-                  className="object-cover object-top w-full h-full" priority />
+                  className="object-cover object-top w-full h-full" priority unoptimized={true} />
               </div>
               {/* Floating badge */}
               <motion.div animate={{ y: [0, -8, 0] }} transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
