@@ -9,7 +9,7 @@ export const resumeData = {
     phone: "8102672901",
     linkedin: "https://www.linkedin.com/in/satyam-singh21/",
     github: "https://github.com/satyamrajput12",
-    photo: "/Satyam.jpg",
+    photo: "/satyam.jpg",
   },
   projects: [
     {
