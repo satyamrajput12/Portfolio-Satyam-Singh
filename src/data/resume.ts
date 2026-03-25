@@ -1,7 +1,7 @@
 export const resumeData = {
   basics: {
     name: "Satyam Singh",
-    title: "Full Stack Developer & CS Engineer",
+    title: "Full Stack Developer & UI/UX Designer",
     summary:
       "Computer Science & Engineering student at Lovely Professional University building full-stack web applications with modern front-end and back-end technologies. Passionate about AI-powered tools, clean UI/UX, and scalable solutions.",
     location: "Jehanabad, Bihar 804423",
@@ -109,7 +109,10 @@ export const resumeData = {
     toolsPlatforms: [
       { name: "MongoDB", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
       { name: "VS Code", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
-      { name: "MS SQL Server", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" }
+      { name: "MS SQL Server", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" },
+      { name: "AutoCAD", image: "https://cdn-icons-png.flaticon.com/512/6241/6241513.png" },
+      { name: "Excel", image: "https://cdn-icons-png.flaticon.com/512/732/732115.png" },
+      { name: "Figma", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" }
     ],
     softSkills: [
       { name: "Time Management", image: "https://cdn-icons-png.flaticon.com/512/2928/2928841.png" },

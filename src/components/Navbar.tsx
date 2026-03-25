@@ -15,8 +15,25 @@ export default function Navbar() {
   const router = useRouter();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 40);
+      
+      const sections = NAV.map(item => item.toLowerCase());
+      let current = "";
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 150 && rect.bottom >= 150) {
+            current = section.charAt(0).toUpperCase() + section.slice(1);
+          }
+        }
+      }
+      if (window.scrollY < 100) current = "";
+      setActive(current);
+    };
     window.addEventListener("scroll", onScroll);
+    onScroll(); // initial check
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
@@ -52,20 +69,28 @@ export default function Navbar() {
         </button>
 
         {/* Desktop */}
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-2 xl:gap-3">
           {NAV.map((item) => (
             <button key={item} onClick={() => handleNavClick(item)}
-              className={`font-body text-sm transition-colors hover:text-[#00d4ff] ${active === item ? "text-[#00d4ff]" : "text-white/60"}`}>
-              {item}
+              className={`relative px-3 xl:px-4 py-2 rounded-xl font-body text-sm font-bold transition-all duration-300 ease-out overflow-hidden group
+                ${active === item 
+                  ? "text-white bg-gradient-to-r from-[#00d4ff]/20 to-[#7c3aed]/20 border border-[#00d4ff]/40 shadow-[0_0_15px_rgba(0,212,255,0.3)]" 
+                  : "text-white/70 hover:text-white bg-white/5 border border-white/10 hover:border-[#00d4ff]/40 hover:bg-[#00d4ff]/10 hover:shadow-[0_0_15px_rgba(0,212,255,0.2)]"
+                } hover:-translate-y-1 active:translate-y-0`}
+            >
+              <span className="relative z-10 tracking-widest uppercase text-xs">{item}</span>
             </button>
           ))}
-          <Link href="/resume" className="flex items-center gap-2 font-body text-sm font-semibold text-[#00d4ff] border border-[#00d4ff]/30 px-4 py-2 rounded-full hover:bg-[#00d4ff]/10 hover:border-[#00d4ff]/60 transition-all duration-300">
-            <FileText size={16} /> Resume
+          <Link href="/resume" className="ml-2 flex items-center gap-2 font-body text-sm font-bold text-white bg-gradient-to-r from-[#00d4ff] to-[#7c3aed] px-5 py-2.5 rounded-xl shadow-[0_0_15px_rgba(124,58,237,0.4)] hover:shadow-[0_0_25px_rgba(0,212,255,0.6)] hover:-translate-y-1 active:translate-y-0 transition-all duration-300 relative overflow-hidden group">
+            <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
+            <span className="relative z-10 flex items-center gap-2 uppercase tracking-wider text-xs">
+              <FileText size={16} /> Resume
+            </span>
           </Link>
         </div>
 
         {/* Mobile hamburger */}
-        <button className="md:hidden text-white/80" onClick={() => setOpen(!open)}>
+        <button className="lg:hidden text-white/80 p-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors" onClick={() => setOpen(!open)}>
           {open ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
@@ -74,7 +99,7 @@ export default function Navbar() {
       <AnimatePresence>
         {open && (
           <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }}
-            className="md:hidden glass border-t border-white/5 px-6 py-4 absolute w-full top-full left-0 flex flex-col gap-2">
+            className="lg:hidden glass border-t border-white/5 px-6 py-4 absolute w-full top-full left-0 flex flex-col gap-2">
             {NAV.map((item) => (
               <button key={item} onClick={() => handleNavClick(item)}
                 className="block w-full text-left py-2 text-white/70 hover:text-[#00d4ff] font-body text-sm transition-colors">

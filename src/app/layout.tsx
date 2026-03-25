@@ -4,7 +4,7 @@ import CustomCursor from "@/components/CustomCursor";
 
 export const metadata: Metadata = {
   title: "Satyam Singh | Full Stack Developer",
-  description: "Portfolio of Satyam Singh — CS Engineer, Full Stack Developer & AI enthusiast.",
+  description: "Portfolio of Satyam Singh — UI/UX Designer, Full Stack Developer & AI enthusiast.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

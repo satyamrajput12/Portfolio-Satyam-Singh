@@ -7,7 +7,7 @@ import Navbar from "@/components/Navbar";
 
 const skills = {
   "Languages": ["C++", "Python", "C", "Java", "React", "Node"],
-  "Tools/Platforms": ["MongoDB", "VS Code", "MS SQL Server", "Tailwind CSS"],
+  "Tools/Platforms": ["MongoDB", "VS Code", "MS SQL Server", "Tailwind CSS", "AutoCAD", "Excel", "Figma"],
   "Soft Skills": ["Time Management", "Problem-Solving", "Team Player", "Adaptability"]
 };
 
@@ -113,7 +113,7 @@ export default function ResumePage() {
             <div className="relative z-10 flex flex-col md:flex-row md:items-start justify-between gap-8">
               <div className="space-y-4">
                 <h1 className="text-4xl md:text-5xl font-display font-bold glow-text">Satyam Singh</h1>
-                <h2 className="text-xl md:text-2xl text-[#00d4ff] font-medium">Software Developer / CSE Student</h2>
+                <h2 className="text-xl md:text-2xl text-[#00d4ff] font-medium">Software Developer / UI/UX Designer</h2>
                 <div className="flex flex-col sm:flex-row gap-3 pt-2 text-sm text-white/70">
                   <a href="mailto:satyamkinjer111@gmail.com" className="flex items-center gap-2 hover:text-[#00d4ff] transition-colors"><Mail size={16} /> satyamkinjer111@gmail.com</a>
                   <a href="tel:+918102672901" className="flex items-center gap-2 hover:text-[#00d4ff] transition-colors"><Phone size={16} /> +91 8102672901</a>
